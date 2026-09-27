@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  camping-app:
+    image: rajeshchandran007/camping-app-nodejs:latest
+    container_name: camping-app-backend
+    restart: always
+    ports:
+      - "3002:3000"
+    env_file:
+      - .env        # Your Atlas connection string must be inside this file!
